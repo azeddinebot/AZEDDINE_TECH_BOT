@@ -4,7 +4,7 @@ import {fileURLToPath} from 'url';
 import fs from 'fs'; 
 import moment from 'moment-timezone';
 
-global.botnumber = "212782862520"
+global.botnumber = "212690781092"
 global.confirmCode = ""
 global.authFile = `MysticSession`;
 
@@ -16,23 +16,23 @@ global.isBaileysFail = true;
 global.defaultLenguaje = 'es';
 
 global.owner = [
-  ['212782862520', '👑 Propietario 👑', true],
-  ['212782862520'],
-  ['212782862520']
+  ['212690781092', '👑 Propietario 👑', true],
+  ['212690781092'],
+  ['212690781092']
 ];
 
-global.suittag = ['212782862520'];
-global.prems = ['212782862520'];
+global.suittag = ['212690781092'];
+global.prems = ['212690781092'];
 
 // Base Rest Api
 global.BASE_API_DELIRIUS = "https://delirius-apiofc.vercel.app";
 
 global.packname = 'Sticker';
-global.author = 'BrunoSobrino';
-global.wm = 'The Mystic - Bot';
-global.titulowm = 'Mystic Bot';
-global.titulowm2 = `Mystic Bot`
-global.igfg = 'The Mystic';
+global.author = 'AZEDDINE-TECH-BOT';
+global.wm = 'AZEDDINE-TECH-BOT';
+global.titulowm = 'AZEDDINE-TECH-BOT';
+global.titulowm2 = `AZEDDINE-TECH-BOT`
+global.igfg = 'AZEDDINE-TECH-BOT';
 global.wait = '*_[ ⏳ ] Cargando..._*';
 
 global.imagen1 = fs.readFileSync('./src/assets/images/menu/languages/es/menu.png');
@@ -52,16 +52,16 @@ global.mes = d.toLocaleDateString('es', {month: 'long'});
 global.año = d.toLocaleDateString('es', {year: 'numeric'});
 global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true});
 //* ****************************
-global.wm2 = `${dia} ${fecha}\nThe Mystic - Bot`;
-global.gt = 'The Mystic - Bot';
-global.mysticbot = 'The Mystic - Bot';
+global.wm2 = `${dia} ${fecha}\nAZEDDINE-TECH-BOT`;
+global.gt = 'AZEDDINE-TECH-BOT';
+global.mysticbot = 'AZEDDINE-TECH-BOT';
 global.channel = 'https://whatsapp.com/channel/0029Vaein6eInlqIsCXpDs3y';
 global.md = 'https://github.com/BrunoSobrino/TheMystic-Bot-MD';
 global.mysticbot = 'https://github.com/BrunoSobrino/TheMystic-Bot-MD';
 global.waitt = '*_[ ⏳ ] Cargando..._*';
 global.waittt = '*_[ ⏳ ] Cargando..._*';
 global.waitttt = '*_[ ⏳ ] Cargando..._*';
-global.nomorown = '212782862520';
+global.nomorown = '212690781092';
 global.pdoc = ['application/vnd.openxmlformats-officedocument.presentationml.presentation', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/vnd.ms-excel', 'application/msword', 'application/pdf', 'text/rtf'];
 global.cmenut = '❖––––––『';
 global.cmenub = '┊✦ ';
