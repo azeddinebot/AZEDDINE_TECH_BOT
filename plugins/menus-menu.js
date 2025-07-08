@@ -59,9 +59,9 @@ ${tradutor.texto1[10]}
 ├✰ _${usedPrefix}insta_تحميل_من_انستقرام
 ├✰ _${usedPrefix}fb_تحميل_من_فيسبوك
 ├✰ _${usedPrefix}tik_تحميل_من_تيك_توك
-├✰ _${usedPrefix}lang_
-├✰ _${usedPrefix}langgroup_
-├✰ _${usedPrefix}glx_
+├✰ _${usedPrefix}lang_تغيير_لغة
+├✰ _${usedPrefix}threads_تحميل_من_ثريدز
+├✰ _${usedPrefix}apk_تحميل_تطبيقات
 ╰───── • ◆ • ─────╯
 
 ╰────── • التحميل • ──────╯
