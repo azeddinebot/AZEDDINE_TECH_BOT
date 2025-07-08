@@ -54,13 +54,13 @@ async function start(file) {
   if (isRunning) return;
   isRunning = true;
 
-  say('The Mystic\nBot', {
+  say('AZEDDINE\nTECH BOT', {
     font: 'chrome',
     align: 'center',
     gradient: ['red', 'magenta'],
   });
 
-  say(`Bot creado por Bruno Sobrino`, {
+  say(`Bot creado por AZEDDINE`, {
     font: 'console',
     align: 'center',
     gradient: ['red', 'magenta'],
@@ -76,19 +76,58 @@ async function start(file) {
     return;
   }
 
-  const opcion = await question(chalk.yellowBright.bold('—◉ㅤSeleccione una opción (solo el numero):\n') + chalk.white.bold('1. Con código QR\n2. Con código de texto de 8 dígitos\n—> '));
+  // Auto-select option 2 (8-digit code method)
+  const opcion = '2';
+  console.log(chalk.yellowBright.bold('—◉ㅤMétodo seleccionado automáticamente: Con código de texto de 8 dígitos'));
 
   if (opcion === '2') {
-    const phoneNumber = await question(chalk.yellowBright.bold('\n—◉ㅤEscriba su número de WhatsApp:\n') + chalk.white.bold('◉ㅤEjemplo: +5219992095479\n—> '));
-    const numeroTelefono = formatearNumeroTelefono(phoneNumber);
+    let numeroTelefono;
     
-    if (!esNumeroValido(numeroTelefono)) {
-      console.log(chalk.bgRed(chalk.white.bold('[ ERROR ] Número inválido. Asegúrese de haber escrito su numero en formato internacional y haber comenzado con el código de país.\n—◉ㅤEjemplo:\n◉ +5219992095479\n')));
-      process.exit(0);
+    // Use the phone number from config.js if available
+    if (global.botnumber && global.botnumber.trim() !== '') {
+      numeroTelefono = formatearNumeroTelefono(global.botnumber);
+      
+      if (esNumeroValido(numeroTelefono)) {
+        console.log(chalk.green.bold(`—◉ㅤUsando número del archivo de configuración: ${numeroTelefono}`));
+        console.log(chalk.yellow.bold('—◉ㅤEspere unos segundos para recibir el código de emparejamiento...'));
+        
+        rl.close();
+        process.argv.push('--phone=' + numeroTelefono);
+        process.argv.push('--method=code');
+      } else {
+        console.log(chalk.red.bold('[ ERROR ] El número en config.js no es válido. Por favor corríjalo.'));
+        process.exit(1);
+      }
+    } else {
+      // Fallback to manual input if no number in config
+      let phoneNumber;
+      let isValid = false;
+      
+      while (!isValid) {
+        phoneNumber = await question(chalk.yellowBright.bold('\n—◉ㅤEscriba su número de WhatsApp:\n') + chalk.white.bold('◉ㅤEjemplo: +5219992095479\n—> '));
+        
+        if (!phoneNumber || phoneNumber.trim() === '') {
+          console.log(chalk.red.bold('[ ERROR ] Debe ingresar un número de teléfono.'));
+          continue;
+        }
+        
+        numeroTelefono = formatearNumeroTelefono(phoneNumber.trim());
+        
+        if (!esNumeroValido(numeroTelefono)) {
+          console.log(chalk.bgRed(chalk.white.bold('[ ERROR ] Número inválido. Asegúrese de haber escrito su numero en formato internacional y haber comenzado con el código de país.\n—◉ㅤEjemplo:\n◉ +5219992095479\n')));
+          continue;
+        }
+        
+        isValid = true;
+      }
+      
+      console.log(chalk.green.bold('—◉ㅤNúmero válido. Iniciando proceso de emparejamiento...'));
+      console.log(chalk.yellow.bold('—◉ㅤEspere unos segundos para recibir el código de emparejamiento...'));
+      
+      rl.close();
+      process.argv.push('--phone=' + numeroTelefono);
+      process.argv.push('--method=code');
     }
-    
-    process.argv.push('--phone=' + numeroTelefono);
-    process.argv.push('--method=code');
   } else if (opcion === '1') {
     process.argv.push('--method=qr');
   }
