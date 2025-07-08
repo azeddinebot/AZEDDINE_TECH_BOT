@@ -48,6 +48,6 @@ const handler = async (m, { conn, args, command, usedPrefix }) => {
   }
 };
 
-handler.command = /^(threadsd|threads|threaddl|thread)$/i;
+handler.command = /^(th|threads)$/i;
 
 export default handler;
