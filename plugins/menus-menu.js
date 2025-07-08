@@ -56,9 +56,9 @@ const handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text, i
 ${tradutor.texto1[10]}
 
 ╭───── • ◆ • ─────╮
-├✰ _${usedPrefix}menuaudios_
-├✰ _${usedPrefix}menuanimes_
-├✰ _${usedPrefix}labiblia_
+├✰ _${usedPrefix}insta_تحميل_من_انستقرام
+├✰ _${usedPrefix}fb_تحميل_من_فيسبوك
+├✰ _${usedPrefix}tik_تحميل_من_تيك_توك
 ├✰ _${usedPrefix}lang_
 ├✰ _${usedPrefix}langgroup_
 ├✰ _${usedPrefix}glx_
