@@ -20,6 +20,9 @@ let handler = async (m, { conn }) => {
     command = `.snap ${url}`
   } else if (/\.apk(\?|$)/i.test(url)) {
     command = `.apk ${url}`
+  } else if (/play\.google\.com\/store\/apps\/details\?id=/i.test(url) || /play\.google\.com\/work\/apps\/details\?id=/i.test(url)) {
+    // هذا الشرط يتحقق من روابط Google Play Store العادية و Google Play for Work
+    command = `.apk ${url}`
   }
 
   if (command) {
