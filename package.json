@@ -1,7 +1,7 @@
 {
   "name": "AZEDDINE-TECH-BOT",
   "version": "1.0.0",
-  "description": "Un chatbot automatizado para WhatsApp basado en Node.js, que permite realizar múltiples funciones y personalizaciones en la plataforma.",
+  "description": "بوت واتساب متعدد الوظائف مبني على Node.js مع ميزات مخصصة من AZEDDINE TECH.",
   "main": "index.js",
   "type": "module",
   "directories": {
@@ -17,18 +17,26 @@
     "eslintfix": "eslint --fix .",
     "postinstall": "node pipdeps.js"
   },
-  "homepage": "https://github.com/BrunoSobrino/TheMystic-Bot-MD",
+  "homepage": "https://github.com/azeddinebot/AZEDDINE_TECH_BOT",
   "author": {
-    "name": "BrunoSobrino"
+    "name": "AZEDDINE TECH",
+    "email": "your-email@example.com",
+    "url": "https://github.com/azeddinebot"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BrunoSobrino/TheMystic-Bot-MD.git"
+    "url": "git+https://github.com/azeddinebot/AZEDDINE_TECH_BOT.git"
   },
   "bugs": {
-    "url": "https://github.com/BrunoSobrino/TheMystic-Bot-MD/issues"
+    "url": "https://github.com/azeddinebot/AZEDDINE_TECH_BOT/issues"
   },
   "license": "GPL-3.0-or-later",
+  "contributors": [
+    {
+      "name": "AZEDDINE TECH",
+      "url": "https://github.com/azeddinebot"
+    }
+  ],
   "dependencies": {
     "@adiwajshing/keyed-db": "^0.2.4",
     "@bochilteam/scraper": "^5.0.1",
